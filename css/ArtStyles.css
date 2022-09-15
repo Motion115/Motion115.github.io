@@ -1129,7 +1129,7 @@ button:focus {
 }
 .nav__item {
   display: block;
-  height: 3.25rem;
+  height: 5.25rem;
   margin-bottom: 1rem;
   text-align: center;
   /*text-transform: uppercase;*/
