@@ -17,7 +17,7 @@ const { Text, Paragraph, Title } = Typography;
 interface InfoSpec {
   portrait: string;
   name: string;
-  affiliation: string;
+  affiliation?: string;
   personalStatement: JSX.Element;
   googleScholar?: string;
   github?: string;
@@ -66,7 +66,9 @@ const PersonalInfo: React.FC<InfoSpec> = (props) => {
             {props.name}
           </Text>
           <br />
-          <Text style={{ fontSize: "18px" }}>{props.affiliation}</Text>
+          {props.affiliation ? (
+            <Text style={{ fontSize: "18px" }}>{props.affiliation}</Text>
+          ) : null}
           <br />
           <Text>
             {props.location ? (

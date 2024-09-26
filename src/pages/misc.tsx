@@ -1,6 +1,7 @@
 import React from "react";
 import { Layout, Divider, Space, Typography } from "antd";
 import ProjectArchiveList from "../drafts/project_archive";
+import ProjectDisplayList from "../drafts/projects";
 import PrecenseOnWeb from "../drafts/web_presence";
 import WebLinks from "../drafts/links";
 const { Paragraph, Text, Title } = Typography;
@@ -8,6 +9,12 @@ const { Content, Header, Footer } = Layout;
 
 const Misc: React.FC = () => (
   <Content id="Misc">
+    <Title level={4} id="Projects">
+      Selected Projects
+    </Title>
+    <Divider style={{ margin: "0 0 1% 0" }} />
+    <ProjectDisplayList></ProjectDisplayList>
+
     <Title level={4}>Selected Archive of Course Projects</Title>
     <Divider style={{ margin: "0 0 1% 0" }} />
     <ProjectArchiveList></ProjectArchiveList>

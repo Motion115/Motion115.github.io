@@ -28,6 +28,17 @@ const webLink = [
   <TimeEntry
     content={
       <a
+        href="https://colorbrewer2.org/"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
+        <LinkOutlined /> Visualization Color Palette
+      </a>
+    }
+  />,
+  <TimeEntry
+    content={
+      <a
         href="https://www.asimovinstitute.org/neural-network-zoo/"
         target="_blank"
         rel="noreferrer noopener"
@@ -43,7 +54,7 @@ const webLink = [
         target="_blank"
         rel="noreferrer noopener"
       >
-        <LinkOutlined /> Git Commit Messages Guide
+        <LinkOutlined /> Git Commit Messages Guide (Chinese Ver.)
       </a>
     }
   />,

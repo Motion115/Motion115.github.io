@@ -23,11 +23,6 @@ const Homepage: React.FC = () => (
     </Title>
     <Divider style={{ margin: "0 0 1% 0" }} />
     <PublicationDisplayList></PublicationDisplayList>
-    <Title level={4} id="Projects">
-      Selected Projects
-    </Title>
-    <Divider style={{ margin: "0 0 1% 0" }} />
-    <ProjectDisplayList></ProjectDisplayList>
   </Content>
 );
 

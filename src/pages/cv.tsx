@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Layout, Typography, Divider } from "antd";
 
 const { Content } = Layout;
-const { Title } = Typography;
+const { Title, Text, Paragraph } = Typography;
 
 const CV: React.FC = () => {
   const [fileData, setFileData] = useState<Blob>();
@@ -21,6 +21,7 @@ const CV: React.FC = () => {
   return (
     <Content id="CV">
       <Title level={4}></Title>
+      <Paragraph>CV last updated: March, 2024</Paragraph>
       {fileData && (
         <iframe
           src={URL.createObjectURL(fileData)}

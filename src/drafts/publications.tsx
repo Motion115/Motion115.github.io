@@ -6,6 +6,19 @@ const { Title, Paragraph, Text, Link } = Typography;
 
 const publicationList = [
   <PubEntry
+    paperTitle="Designing and Evaluating Sampling Strategies for Multiple-Forecast Visualization (MFV)"
+    authors={
+      <>
+        <b>Ruishi Zou</b>, Siyi Wu, Bingsheng Yao, Dakuo Wang, Lace Padilla
+      </>
+    }
+    venueType="Pending"
+    venueShort="TVCG"
+    venueFull="(Under Review) IEEE Transactions on Visualization and Computer Graphics"
+    preprintLink=""
+    paperLink=""
+  />,
+  <PubEntry
     paperTitle="More Samples or More Prompt Inputs? Exploring Effective In-Context Sampling for LLM Few-Shot Prompt Engineering"
     authors={
       <>
@@ -15,8 +28,9 @@ const publicationList = [
     }
     venueType="Conference"
     venueShort="NAACL"
-    venueFull="Accepted to Findings of the Association for Computational Linguistics: NAACL 2024"
+    venueFull="Findings of the Association for Computational Linguistics: NAACL 2024"
     preprintLink="https://arxiv.org/abs/2311.09782"
+    paperLink="https://aclanthology.org/2024.findings-naacl.115/"
   />,
   <PubEntry
     paperTitle="Chart2Vec: A Universal Embedding of Context-Aware Visualizations"
