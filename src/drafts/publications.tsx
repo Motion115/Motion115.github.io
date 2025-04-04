@@ -6,17 +6,64 @@ const { Title, Paragraph, Text, Link } = Typography;
 
 const publicationList = [
   <PubEntry
+    paperTitle="Towards a Design Guideline for RPA Evaluation: A Survey of Large Language Model-Based Role-Playing Agents"
+    authors={
+      <>
+        Chaoran Chen, Bingsheng Yao, <b>Ruishi Zou</b>, Wenyue Hua, Weimin Lyu,
+        Toby Jia-Jun Li, Dakuo Wang
+      </>
+    }
+    venueType="arXiv"
+    venueShort="arXiv"
+    venueFull="arXiv Preprint"
+    preprintLink="https://arxiv.org/abs/2502.13012"
+    paperLink=""
+    materialLink="https://github.com/CRChenND/LLM_roleplay_agent_eval_survey"
+  />,
+  <PubEntry
     paperTitle="Designing and Evaluating Sampling Strategies for Multiple-Forecast Visualization (MFV)"
     authors={
       <>
         <b>Ruishi Zou</b>, Siyi Wu, Bingsheng Yao, Dakuo Wang, Lace Padilla
       </>
     }
-    venueType="Pending"
-    venueShort="TVCG"
-    venueFull="(Under Review) IEEE Transactions on Visualization and Computer Graphics"
-    preprintLink=""
+    venueType="arXiv"
+    venueShort="arXiv"
+    venueFull="arXiv Preprint"
+    preprintLink="https://arxiv.org/abs/2411.02576"
     paperLink=""
+    materialLink="https://osf.io/gv97m/?viewonly=772184512cff4fa5a21dd8a953782e82"
+  />,
+  <PubEntry
+    paperTitle="Designing Human-AI System for Legal Research: A Case Study of Precedent Search in Chinese Law"
+    authors={
+      <>
+        Jiarui Guan*, <b>Ruishi Zou</b>*, Jiajun Zhang, Kimpan Shin, Bingsu He,
+        Zhuhe Zhang, Chen, Ye
+      </>
+    }
+    venueType="Conference"
+    venueShort="CHI'25"
+    venueFull="In Extended Abstracts of the 2025 CHI Conference on Human Factors in Computing Systems (CHI'25 LBW)"
+    presentationLink="https://www.youtube.com/watch?v=z1Ot7A_E8zY"
+  />,
+  <PubEntry
+    paperTitle="GistVis: Automatic Generation of Word-scale Visualizations from Data-rich Documents"
+    authors={
+      <>
+        <b>Ruishi Zou</b>*, Yinqi Tang*, Jingzhu Chen, Siyu Lu, Yan Lu, Yingfan
+        Yang, Chen Ye
+      </>
+    }
+    venueType="Conference"
+    venueShort="CHI'25"
+    venueFull="In Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems (CHI'25)"
+    preprintLink="https://arxiv.org/abs/2502.03784"
+    paperLink=""
+    codeLink="https://github.com/Motion115/GistVis"
+    exploreLink="https://motion115.github.io/GistVis"
+    presentationLink="https://www.youtube.com/watch?v=OIjAvoWdVCo"
+    awardName="Best Paper Honorable Mention recognition (top 5%)"
   />,
   <PubEntry
     paperTitle="More Samples or More Prompt Inputs? Exploring Effective In-Context Sampling for LLM Few-Shot Prompt Engineering"
@@ -27,7 +74,7 @@ const publicationList = [
       </>
     }
     venueType="Conference"
-    venueShort="NAACL"
+    venueShort="NAACL'24"
     venueFull="Findings of the Association for Computational Linguistics: NAACL 2024"
     preprintLink="https://arxiv.org/abs/2311.09782"
     paperLink="https://aclanthology.org/2024.findings-naacl.115/"
@@ -57,7 +104,7 @@ const publicationList = [
       </>
     }
     venueType="Conference"
-    venueShort="UIST"
+    venueShort="UIST'23"
     venueFull="Adjunct Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology (UIST 2023 Posters)"
     paperLink="https://doi.org/10.1145/3586182.3616663"
     exploreLink="https://motion115.github.io/iTutor"
@@ -67,7 +114,12 @@ const publicationList = [
 ];
 
 const PublicationDisplayList = () => {
-  return <PubList itemList={publicationList} />;
+  return (
+    <>
+      <p>* denotes equal contribution</p>
+      <PubList itemList={publicationList} />
+    </>
+  );
 };
 
 export default PublicationDisplayList;

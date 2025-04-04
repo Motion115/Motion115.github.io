@@ -8,7 +8,7 @@ const PersonalIntrouction = () => {
   return (
     <PersonalInfo
       portrait={Selfie}
-      name="Ruishi Zou"
+      name="Ruishi (Ray) Zou"
       affiliation="University of California, San Diego"
       location="La Jolla, CA, USA"
       googleScholar="https://scholar.google.com/citations?user=fHRnWkUAAAAJ"
@@ -21,15 +21,15 @@ const PersonalIntrouction = () => {
         <>
           {/* <Paragraph
             style={{
-              width: "80%",
+              width: "65%",
               padding: "auto",
               margin: "0 auto",
               textAlign: "center",
             }}
           >
             <Text style={{ color: "#006FFF", fontSize: "20px" }}>
-              🌟 I am actively seeking RA openings, Ph.D.
-              opportunities (Fall 2025 or beyond). 
+              🌟 I am actively seeking summer (2025) research internships and Ph.D.
+              opportunities (spring 2026 or beyond). 
               If you see me as a potential fit for your agenda, please message me!
             </Text>
           </Paragraph> */}
@@ -48,11 +48,11 @@ const PersonalIntrouction = () => {
             <b>user interface software and technology</b>.
           </Paragraph>
           <Paragraph>
-            I am now a master's student in Computer Science at UC San
-            Diego. Previously, I graduated with honors from Tongji University,
-            majoring in Computer Science and Technology. I have previous
-            experience in both research and industry with topics related to HCI
-            + AI research. Previously, I worked closely with
+            I am now a master's student in Computer Science at UC San Diego in HCI track.
+            Previously, I graduated with honors from Tongji University, majoring
+            in Computer Science and Technology. I have previous experience in
+            both research and industry with topics related to HCI + AI research.
+            Previously, I worked closely with
             <OuterLink
               link="https://tjdi.tongji.edu.cn/TeacherDetail.do?id=5056&lang=en"
               text="Prof. Qing Chen"
@@ -67,8 +67,9 @@ const PersonalIntrouction = () => {
               link="https://ava.antv.antgroup.com/en/"
               text="AVA team"
             />{" "}
-            at Ant Group. I have also hosted several undergraduate (interest-driven) research
-            projects about HCI at Tongji University with support from
+            at Ant Group. I have also hosted several undergraduate
+            (interest-driven) research projects about HCI at Tongji University
+            with support from
             <OuterLink
               link="https://see.tongji.edu.cn/info/1398/11358.htm"
               text="Prof. Chen Ye"

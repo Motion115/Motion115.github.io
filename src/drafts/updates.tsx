@@ -5,6 +5,44 @@ const { Title, Paragraph, Text, Link } = Typography;
 
 const updatesList = [
   <TimeEntry
+    startTime="Feb 24, 2025"
+    content={
+      <>
+        One paper about <b>Human-AI collaboration's application in the legal domain</b> accepted as CHI 2025 Late Breaking Work!
+      </>
+    }
+  />,
+  <TimeEntry
+    startTime="Feb 18, 2025"
+    content={
+      <>
+        One preprint about <b>Role-playing Language Agents</b> online on arXiv!
+      </>
+    }
+  />,
+  <TimeEntry
+    startTime="Feb 13, 2025"
+    content={
+      <>
+        One paper <b>GistVis</b> conditionally accepted to CHI 2025! See you in
+        Japan!
+      </>
+    }
+  />,
+  <TimeEntry
+    startTime="Nov 5, 2024"
+    content={
+      <>
+        One preprint about <b>Multiple Forecast Visualization</b> online on
+        arXiv!
+      </>
+    }
+  />,
+  <TimeEntry
+    startTime="September, 2024"
+    content={<>Started a new journey at UC San Diego!</>}
+  />,
+  <TimeEntry
     startTime="March 30, 2024"
     content={
       <>
@@ -34,7 +72,7 @@ const updatesList = [
         >
           UIST 23
         </a>{" "}
-        in person and reported our work at{" "}
+        in person and reported our work <b>iTutor</b> at{" "}
         <a
           href="https://programs.sigchi.org/uist/2023/program/content/127396"
           target="blank"
@@ -107,7 +145,7 @@ const updatesList = [
 ];
 
 const NewsDisplayList = () => {
-  return <TimedPubList itemList={updatesList} displayLength={2}/>;
+  return <TimedPubList itemList={updatesList} displayLength={3}/>;
 };
 
 export default NewsDisplayList;

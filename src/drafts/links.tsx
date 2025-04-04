@@ -10,7 +10,7 @@ const webLink = [
         target="_blank"
         rel="noreferrer noopener"
       >
-        <LinkOutlined /> Citation Checklist
+        <LinkOutlined /> Submission Checklist
       </a>
     }
   />,
@@ -33,6 +33,13 @@ const webLink = [
         rel="noreferrer noopener"
       >
         <LinkOutlined /> Visualization Color Palette
+      </a>
+    }
+  />,
+  <TimeEntry
+    content={
+      <a href="https://lawsofux.com/" target="_blank" rel="noreferrer noopener">
+        <LinkOutlined /> Laws of UX
       </a>
     }
   />,

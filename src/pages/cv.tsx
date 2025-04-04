@@ -8,7 +8,7 @@ const CV: React.FC = () => {
   const [fileData, setFileData] = useState<Blob>();
 
   useEffect(() => {
-    fetch("./assets/Ruishi Zou - Public CV - 2404.pdf")
+    fetch("./assets/Ruishi Zou - Public CV.pdf")
       .then((response) => response.blob())
       .then((data) => {
         setFileData(data);
@@ -21,7 +21,7 @@ const CV: React.FC = () => {
   return (
     <Content id="CV">
       <Title level={4}></Title>
-      <Paragraph>CV last updated: March, 2024</Paragraph>
+      <Paragraph> </Paragraph>
       {fileData && (
         <iframe
           src={URL.createObjectURL(fileData)}

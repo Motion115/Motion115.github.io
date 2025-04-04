@@ -26,10 +26,10 @@ const items: MenuProps["items"] = [
     //   },
     // ],
   },
-  // {
-  //   label: <a href={baseServerAddress + "/CV"}>CV</a>,
-  //   key: "CV",
-  // },
+  {
+    label: <a href={baseServerAddress + "/CV"}>CV</a>,
+    key: "CV",
+  },
   {
     label: <a href={baseServerAddress + "/misc"}>Misc</a>,
     key: "Misc",

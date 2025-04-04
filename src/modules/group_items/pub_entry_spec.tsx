@@ -142,9 +142,8 @@ const PubEntry: React.FC<PubEntrySpec> = (props: PubEntrySpec) => {
           <br />
           {props.awardName ? (
             <>
-              <Text>
-                <TrophyOutlined style={{ color: "#B31B1B" }} />{" "}
-                {props.awardName}
+              <Text style={{ color: "#B31B1B" }}>
+                <TrophyOutlined /> {props.awardName}
               </Text>
               <br />
             </>
