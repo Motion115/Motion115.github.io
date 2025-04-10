@@ -109,7 +109,7 @@ const publicationList = [
     paperLink="https://doi.org/10.1145/3586182.3616663"
     exploreLink="https://motion115.github.io/iTutor"
     codeLink="https://github.com/Motion115/iTutor"
-    awardName="(iTutor's related project) Third Prize in China Collegiate Computing Contest - HCI Innovation Competition 2023 (top 3%)"
+    // awardName="(iTutor's related project) Third Prize in China Collegiate Computing Contest - HCI Innovation Competition 2023 (top 3%)"
   />,
 ];
 

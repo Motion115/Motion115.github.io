@@ -21,6 +21,17 @@ const projList = [
     affiliation="Carnegie Mellon University (Remote)"
   />,
   <PubEntry
+    paperTitle="iTutor: A Generative Tutorial System for Teaching the Elders to Use
+          Smartphone Applications"
+    authors={<>Team Lead</>}
+    venueType="Competition"
+    venueFull="China Collegiate Computing Contest - HCI Innovation Competition 2023"
+    exploreLink="https://motion115.github.io/iTutor"
+    codeLink="https://github.com/Motion115/iTutor"
+    awardName="Third Prize (top 3%)"
+    affiliation="Tongji University"
+  />,
+  <PubEntry
     paperTitle="UI2Vec: A Multimodal Embedding Method for Robust UI Classification"
     authors={<>Independent Work</>}
     venueType="Course"

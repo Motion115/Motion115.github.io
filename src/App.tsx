@@ -41,7 +41,7 @@ const App: React.FC = () => (
         </Header>
         <Routing></Routing>
         <Footer>
-          <Text>Last updated: March 2025. All Rights Reserved.</Text>
+          <Text>Last updated: April 2025. All Rights Reserved.</Text>
           <br />
           {/* <Text>
             Theme by{" "}

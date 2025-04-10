@@ -17,6 +17,17 @@ const webLink = [
   <TimeEntry
     content={
       <a
+        href="https://hci.prof/blog/"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
+        <LinkOutlined /> Prof. Chen's Blog
+      </a>
+    }
+  />,
+  <TimeEntry
+    content={
+      <a
         href="https://web.archive.org/web/20221205110506/https://antv.vision/en/docs/specification/language/palette/"
         target="_blank"
         rel="noreferrer noopener"
