@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, CSSProperties } from "react";
 import {
   MailOutlined,
   GithubOutlined,
@@ -46,6 +46,9 @@ const PersonalInfo: React.FC<InfoSpec> = (props) => {
   let picWidthSpec = "20%";
   if (screenWidth < 780) picWidthSpec = "40%";
   else picWidthSpec = "20%";
+
+  const personalStatementStyle: CSSProperties =
+    screenWidth < 600 ? { textAlign: "left" } : { textAlign: "justify" };
 
   return (
     <div>
@@ -114,10 +117,12 @@ const PersonalInfo: React.FC<InfoSpec> = (props) => {
           <Divider></Divider>
         </div>
 
-        <div style={{ textAlign: "justify" }}>{props.personalStatement}</div>
+        <div style={personalStatementStyle}>{props.personalStatement}</div>
       </Space>
     </div>
   );
+
+
 };
 
 export default PersonalInfo;

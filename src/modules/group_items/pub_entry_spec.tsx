@@ -10,13 +10,14 @@ import {
   InfoCircleOutlined,
   ArrowDownOutlined,
   ArrowUpOutlined,
-  PaperClipOutlined
+  PaperClipOutlined,
 } from "@ant-design/icons";
 
 import { Row, Col, Space, Typography, Tag, Button, Divider } from "antd";
 import LinkTag from "./link_tag";
 import colorProjection from "../constanats/constants";
 import "../constanats/constants";
+import { Link } from "react-router-dom";
 const { Text } = Typography;
 
 interface PubEntrySpec {
@@ -36,6 +37,7 @@ interface PubEntrySpec {
   venueFull: string;
   affiliation?: string;
   awardName?: string;
+  awardLink?: string;
   paperLink?: string;
   preprintLink?: string;
   exploreLink?: string;
@@ -143,7 +145,19 @@ const PubEntry: React.FC<PubEntrySpec> = (props: PubEntrySpec) => {
           {props.awardName ? (
             <>
               <Text style={{ color: "#B31B1B" }}>
-                <TrophyOutlined /> {props.awardName}
+                <TrophyOutlined />{" "}
+                {props.awardLink ? (
+                  <Link
+                    to={props.awardLink}
+                    style={{ color: "#B31B1B" }}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    {props.awardName}
+                  </Link>
+                ) : (
+                  props.awardName
+                )}
               </Text>
               <br />
             </>

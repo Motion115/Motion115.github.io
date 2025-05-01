@@ -39,11 +39,11 @@ const updatesList = [
     }
   />,
   <TimeEntry
-    startTime="September, 2024"
+    startTime="Sep 15, 2024"
     content={<>Started a new journey at UC San Diego!</>}
   />,
   <TimeEntry
-    startTime="March 30, 2024"
+    startTime="Mar 30, 2024"
     content={
       <>
         One paper <b>Chart2Vec</b> was accepted to IEEE TVCG!
@@ -51,7 +51,7 @@ const updatesList = [
     }
   />,
   <TimeEntry
-    startTime="March 14, 2024"
+    startTime="Mar 14, 2024"
     content={
       <>
         One paper about <b>In-Context Sampling for LLMs</b> was accepted to
@@ -61,7 +61,7 @@ const updatesList = [
   />,
   <TimeEntry
     startTime="Oct 29, 2023"
-    endTime="Nov 1, 2023"
+    // endTime="Nov 1, 2023"
     content={
       <>
         Attended{" "}
@@ -86,7 +86,7 @@ const updatesList = [
   />,
   <TimeEntry
     startTime="Oct 20, 2023"
-    endTime="Oct 22, 2023"
+    // endTime="Oct 22, 2023"
     content={
       <>
         Received Third Price in{" "}

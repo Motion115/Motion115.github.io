@@ -1,9 +1,9 @@
-import { Space, Typography, Image, Divider, Layout, Alert } from "antd";
+import { Typography, Alert } from "antd";
 import OuterLink from "../modules/outlinks";
 import PersonalInfo from "../modules/info";
 import Selfie from "../assets/selfie2.png";
-import { createRef, useEffect, useState } from "react";
-const { Text, Paragraph, Title } = Typography;
+import { useEffect, useState } from "react";
+const { Text, Paragraph } = Typography;
 
 const PersonalIntrouction = () => {
   const [widthPercentage, setWidthPercentage] = useState("60%");
@@ -41,17 +41,36 @@ const PersonalIntrouction = () => {
             }}
             message={
               <Text style={{ fontWeight: "bold" }}>
-                I will attend CHI'25 in person! Let's 'CHI'nnect☕👋!{" "}
+                🔍 Attending CHI'25—let's 'CHI'nnect ☕👋! Presenting my
+                first-authored papers at the{" "}
+                <a
+                  href="https://programs.sigchi.org/chi/2025/program/content/188659"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Make it visible
+                </a>{" "}
+                and the{" "}
+                <a
+                  href="https://programs.sigchi.org/chi/2025/program/content/194323"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  LBW: Human-AI Collaboration
+                </a>{" "}
+                sessions 🎉. Say hi if you spot me! <br />
+                📚{" "}
                 <a
                   href="https://motion115.github.io/chi2025papers"
                   target="_blank"
+                  rel="noreferrer"
                 >
+                  {" "}
                   Explore CHI'25 papers
                 </a>{" "}
-                📚 with visual analysis!
+                using visual analysis!
               </Text>
             }
-            showIcon
           />
           <Paragraph />
           <Alert
@@ -90,8 +109,9 @@ const PersonalIntrouction = () => {
             Fun facts about me: 1) before deep diving into new knowledge, I love
             to approach it with first-order intuitions, hence my love for
             narrating insights with visualizations; 2) I usually prefer my
-            interface to be direct manipulation, even in the age of chatbots; 3) besides research, I am a
-            car/aviation enthusiast: I watch motorsport races and sim race F1/WRC machines.{" "}
+            interface to be direct manipulation, even in the age of chatbots; 3)
+            besides research, I am a car/aviation enthusiast: I watch motorsport
+            races and sim race F1/WRC machines.{" "}
           </Paragraph>
           <Paragraph>
             I am now a master's student in Computer Science at UC San Diego.

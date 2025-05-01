@@ -1,8 +1,5 @@
-import { Typography } from "antd";
 import PubList from "../modules/pub_list";
 import PubEntry from "../modules/group_items/pub_entry_spec";
-
-const { Title, Paragraph, Text, Link } = Typography;
 
 const publicationList = [
   <PubEntry
@@ -39,13 +36,16 @@ const publicationList = [
     authors={
       <>
         Jiarui Guan*, <b>Ruishi Zou</b>*, Jiajun Zhang, Kimpan Shin, Bingsu He,
-        Zhuhe Zhang, Chen, Ye
+        Zhuhe Zhang, Chen Ye
       </>
     }
     venueType="Conference"
     venueShort="CHI'25"
     venueFull="In Extended Abstracts of the 2025 CHI Conference on Human Factors in Computing Systems (CHI'25 LBW)"
+    paperLink="https://dl.acm.org/doi/10.1145/3706599.3720167"
+    preprintLink="https://arxiv.org/abs/2504.08235"
     presentationLink="https://www.youtube.com/watch?v=z1Ot7A_E8zY"
+    exploreLink="https://drive.google.com/file/d/14aVKKZpnq6T-BrwyWZ_N3Ktx5dKJ1n16/view?usp=sharing"
   />,
   <PubEntry
     paperTitle="GistVis: Automatic Generation of Word-scale Visualizations from Data-rich Documents"
@@ -59,11 +59,12 @@ const publicationList = [
     venueShort="CHI'25"
     venueFull="In Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems (CHI'25)"
     preprintLink="https://arxiv.org/abs/2502.03784"
-    paperLink=""
+    paperLink="https://dl.acm.org/doi/10.1145/3706598.3713881"
     codeLink="https://github.com/Motion115/GistVis"
     exploreLink="https://motion115.github.io/GistVis"
     presentationLink="https://www.youtube.com/watch?v=OIjAvoWdVCo"
     awardName="Best Paper Honorable Mention recognition (top 5%)"
+    awardLink="https://drive.google.com/file/d/1H8oKnJMCngU6uWe947Hhu_oe3P83i7n8/view?usp=sharing"
   />,
   <PubEntry
     paperTitle="More Samples or More Prompt Inputs? Exploring Effective In-Context Sampling for LLM Few-Shot Prompt Engineering"
@@ -108,7 +109,7 @@ const publicationList = [
     venueFull="Adjunct Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology (UIST 2023 Posters)"
     paperLink="https://doi.org/10.1145/3586182.3616663"
     exploreLink="https://motion115.github.io/iTutor"
-    codeLink="https://github.com/Motion115/iTutor"
+    materialLink="https://github.com/Motion115/iTutor"
     // awardName="(iTutor's related project) Third Prize in China Collegiate Computing Contest - HCI Innovation Competition 2023 (top 3%)"
   />,
 ];
