@@ -3,21 +3,6 @@ import PubEntry from "../modules/group_items/pub_entry_spec";
 
 const publicationList = [
   <PubEntry
-    paperTitle="Towards a Design Guideline for RPA Evaluation: A Survey of Large Language Model-Based Role-Playing Agents"
-    authors={
-      <>
-        Chaoran Chen, Bingsheng Yao, <b>Ruishi Zou</b>, Wenyue Hua, Weimin Lyu,
-        Toby Jia-Jun Li, Dakuo Wang
-      </>
-    }
-    venueType="arXiv"
-    venueShort="arXiv"
-    venueFull="arXiv Preprint"
-    preprintLink="https://arxiv.org/abs/2502.13012"
-    paperLink=""
-    materialLink="https://github.com/CRChenND/LLM_roleplay_agent_eval_survey"
-  />,
-  <PubEntry
     paperTitle="Designing and Evaluating Sampling Strategies for Multiple-Forecast Visualization (MFV)"
     authors={
       <>
@@ -30,6 +15,22 @@ const publicationList = [
     preprintLink="https://arxiv.org/abs/2411.02576"
     paperLink=""
     materialLink="https://osf.io/gv97m/?viewonly=772184512cff4fa5a21dd8a953782e82"
+  />,
+  <PubEntry
+    paperTitle="Towards a Design Guideline for RPA Evaluation: A Survey of Large Language Model-Based Role-Playing Agents"
+    authors={
+      <>
+        Chaoran Chen*, Bingsheng Yao*, <b>Ruishi Zou</b>, Wenyue Hua, Weimin
+        Lyu, Toby Jia-Jun Li, Dakuo Wang
+      </>
+    }
+    venueType="Conference"
+    venueShort="ACL'25"
+    venueFull="Findings of the Association for Computational Linguistics: ACL 2025"
+    preprintLink="https://arxiv.org/abs/2502.13012"
+    paperLink="https://aclanthology.org/2025.findings-acl.938/"
+    exploreLink="https://agentsurvey.hailab.io/"
+    materialLink="https://github.com/CRChenND/LLM_roleplay_agent_eval_survey"
   />,
   <PubEntry
     paperTitle="Designing Human-AI System for Legal Research: A Case Study of Precedent Search in Chinese Law"

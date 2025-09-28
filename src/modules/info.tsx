@@ -4,12 +4,14 @@ import {
   GithubOutlined,
   LinkedinOutlined,
   WeiboOutlined,
-  TwitterOutlined
+  TwitterOutlined,
+  ArrowDownOutlined,
+  ArrowUpOutlined
 } from "@ant-design/icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGraduationCap, faLocationDot} from "@fortawesome/free-solid-svg-icons";
 import { faOrcid } from "@fortawesome/free-brands-svg-icons";
-import { Space, Typography, Image, Divider, Layout } from "antd";
+import { Space, Typography, Image, Divider, Layout, Button } from "antd";
 import LinkIcon from "./group_items/link_icon";
 
 const { Text, Paragraph, Title } = Typography;
@@ -19,6 +21,7 @@ interface InfoSpec {
   name: string;
   affiliation?: string;
   personalStatement: JSX.Element;
+  morePersonalStatement: JSX.Element;
   googleScholar?: string;
   github?: string;
   linkedin?: string;
@@ -49,6 +52,24 @@ const PersonalInfo: React.FC<InfoSpec> = (props) => {
 
   const personalStatementStyle: CSSProperties =
     screenWidth < 600 ? { textAlign: "left" } : { textAlign: "justify" };
+
+      
+  const [showState, setShowState] = useState("show more about me");
+    const renderIcon = () => {
+        if (showState === "show more about me") {
+          return <ArrowDownOutlined />;
+        } else {
+          return <ArrowUpOutlined />;
+        }
+      };
+
+    const showStateConfig = () => {
+      if (showState === "show more about me") {
+        setShowState("hide");
+      } else if (showState === "hide") {
+        setShowState("show more about me");
+      }
+    };
 
   return (
     <div>
@@ -118,6 +139,21 @@ const PersonalInfo: React.FC<InfoSpec> = (props) => {
         </div>
 
         <div style={personalStatementStyle}>{props.personalStatement}</div>
+
+        {showState === "show more about me" ? null : (
+          <div style={personalStatementStyle}>
+            {props.morePersonalStatement}
+          </div>
+        )}
+
+        <Button
+          type="text"
+          onClick={showStateConfig}
+          style={{ width: "100%", textAlign: "center" }}
+        >
+          {renderIcon()}
+          {showState}
+        </Button>
       </Space>
     </div>
   );
