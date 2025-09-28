@@ -1,11 +1,11 @@
 import type { MenuProps } from "antd";
 
 
-const baseServerAddress = process.env.PUBLIC_URL;
+const baseServerAddress = "";
 
 const items: MenuProps["items"] = [
   {
-    label: <a href={baseServerAddress + "/"}>Home</a>,
+    label: <a href={baseServerAddress + "#"}>Home</a>,
     key: "Home",
     // children: [
     //   {
@@ -27,11 +27,11 @@ const items: MenuProps["items"] = [
     // ],
   },
   {
-    label: <a href={baseServerAddress + "/CV"}>CV</a>,
+    label: <a href={baseServerAddress + "#CV"}>CV</a>,
     key: "CV",
   },
   {
-    label: <a href={baseServerAddress + "/misc"}>Misc</a>,
+    label: <a href={baseServerAddress + "#misc"}>Misc</a>,
     key: "Misc",
   },
 ];

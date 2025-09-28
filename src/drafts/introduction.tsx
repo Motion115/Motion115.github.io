@@ -1,7 +1,7 @@
 import { Typography, Alert, Divider } from "antd";
 import OuterLink from "../modules/outlinks";
 import PersonalInfo from "../modules/info";
-import Selfie from "../assets/selfie2.png";
+import Selfie from "@/assets/selfie2.png";
 import { useEffect, useState } from "react";
 const { Text, Paragraph, Title } = Typography;
 

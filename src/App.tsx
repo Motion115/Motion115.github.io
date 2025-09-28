@@ -19,6 +19,14 @@ const App: React.FC = () => {
     };
   }, []);
 
+  const getTodayMonth = () => {
+    const currentDate = new Date();
+    const monthNameLong = currentDate.toLocaleString("en-US", {
+      month: "long",
+    });
+    return `${monthNameLong} ${currentDate.getFullYear()}`
+  }
+
   return (
     <ConfigProvider
       theme={{
@@ -56,7 +64,7 @@ const App: React.FC = () => {
           </Header>
           <Routing></Routing>
           <Footer>
-            <Text>Last updated: August 2025. All Rights Reserved.</Text>
+            <Text>Last updated: {getTodayMonth()}. All Rights Reserved.</Text>
             <br />
             {/* <Text>
             Theme by{" "}

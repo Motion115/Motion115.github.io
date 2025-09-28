@@ -12,7 +12,7 @@ const Homepage: React.FC = () => (
   <Content id="About">
     {/* <HeaderAnchor></HeaderAnchor> */}
     <br />
-    <PersonalIntrouction></PersonalIntrouction>
+    <PersonalIntrouction />
     <Title level={4} id="Updates">
       Updates
     </Title>
