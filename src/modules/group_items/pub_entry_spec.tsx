@@ -12,12 +12,14 @@ import {
   ArrowUpOutlined,
   PaperClipOutlined,
 } from "@ant-design/icons";
-
-import { Row, Col, Space, Typography, Tag, Button, Divider } from "antd";
+import { useMeasure } from "react-use";
+import { Image, Space, Typography, Tag, Button, Divider, Flex } from "antd";
 import LinkTag from "./link_tag";
 import colorProjection from "../constanats/constants";
 import "../constanats/constants";
 import { Link } from "react-router-dom";
+import { colorBg, colorPrimary } from "../../style/globalStyle";
+import useScreenStore from "../../store";
 const { Text } = Typography;
 
 interface PubEntrySpec {
@@ -46,9 +48,12 @@ interface PubEntrySpec {
   presentationLink?: string;
   materialLink?: string;
   abstractContent?: JSX.Element;
+  teaser?: string;
+  teaserInteractive?: string
 }
 
 const PubEntry: React.FC<PubEntrySpec> = (props: PubEntrySpec) => {
+  const { shouldWrap } = useScreenStore();
   const [abstractContentVisible, setAbstractContentVisible] =
     useState<boolean>(false);
 
@@ -121,52 +126,103 @@ const PubEntry: React.FC<PubEntrySpec> = (props: PubEntrySpec) => {
     else return null;
   };
 
-  return (
-    <Space>
-      <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-        <Col className="gutter-row" span={24}>
-          <Text strong={true}>{props.paperTitle}</Text>
-          <br />
-          {props.affiliation ? (
-            <>
-              <Text italic={true}>{props.affiliation}</Text>
-              <Divider type="vertical" />
-            </>
-          ) : null}
-          <Text>{props.authors}</Text>
-          <br />
-          <Tag color={colorProjection[props.venueType]}>
-            <i>
-              <b>{props.venueShort ? props.venueShort : props.venueType}</b>
-            </i>
-          </Tag>
-          <Text italic={true}>{props.venueFull}</Text>
-          <br />
-          {props.awardName ? (
-            <>
-              <Text style={{ color: "#B31B1B" }}>
-                <TrophyOutlined />{" "}
-                {props.awardLink ? (
-                  <Link
-                    to={props.awardLink}
-                    style={{ color: "#B31B1B" }}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    {props.awardName}
-                  </Link>
-                ) : (
-                  props.awardName
-                )}
-              </Text>
-              <br />
-            </>
-          ) : null}
+  const [hovered, setHovered] = useState(false);
+  const hoverStyle = {
+    backgroundColor: hovered ? `${colorPrimary}0A` : colorBg,
+    transition: "background-color 0.2s ease",
+  };
 
-          {extraContentController()}
-        </Col>
-      </Row>
-    </Space>
+  const [flexboxRef, { x, y, width, height, top, right, bottom, left }] =
+    useMeasure<HTMLElement>();
+
+  return (
+    <Flex
+      style={{
+        ...hoverStyle,
+        height: "100%",
+      }}
+      gap="middle"
+      wrap={shouldWrap}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      ref={flexboxRef}
+    >
+      {props.teaser && (
+        <div
+          style={{
+            maxWidth: "200px",
+            // maxHeight: height,
+            maxHeight: height,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            overflow: "hidden",
+            transition: "transform 0.3s ease, box-shadow 0.3s ease",
+            boxShadow:
+              hovered && props.teaserInteractive
+                ? "0 0 10px rgba(0, 0, 0, 0.1)"
+                : undefined,
+          }}
+        >
+          <Image
+            src={
+              hovered && props.teaserInteractive
+                ? props.teaserInteractive
+                : props.teaser
+            }
+            style={{
+              maxWidth: "95%",
+              maxHeight: "95%",
+              width: "auto",
+              height: "auto",
+              objectFit: "contain",
+            }}
+            preview={false}
+          />
+        </div>
+      )}
+      <div>
+        <Text strong={true}>{props.paperTitle}</Text>
+        <br />
+        {props.affiliation ? (
+          <>
+            <Text italic={true}>{props.affiliation}</Text>
+            <Divider type="vertical" />
+          </>
+        ) : null}
+        <Text>{props.authors}</Text>
+        <br />
+        <Tag color={colorProjection[props.venueType]}>
+          <i>
+            <b>{props.venueShort ? props.venueShort : props.venueType}</b>
+          </i>
+        </Tag>
+        <Text italic={true}>{props.venueFull}</Text>
+        <br />
+        {props.awardName ? (
+          <>
+            <Text style={{ color: "#B31B1B" }}>
+              <TrophyOutlined />{" "}
+              {props.awardLink ? (
+                <Link
+                  to={props.awardLink}
+                  style={{ color: "#B31B1B" }}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  {props.awardName}
+                </Link>
+              ) : (
+                props.awardName
+              )}
+            </Text>
+            <br />
+          </>
+        ) : null}
+
+        {extraContentController()}
+      </div>
+    </Flex>
   );
 };
 

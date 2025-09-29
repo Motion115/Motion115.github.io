@@ -51,7 +51,13 @@ const PubList: React.FC<PubListSpec> = (props) => {
               checked={selectedTags.includes(tag)}
               onChange={(checked) => handleChange(tag, checked)}
             >
-              <Text>{tag}</Text>
+              <Text
+                style={{
+                  color: selectedTags.includes(tag) ? "#fff" : "#000",
+                }}
+              >
+                {tag}
+              </Text>
             </Tag.CheckableTag>
           ))}
         </Space>
@@ -61,9 +67,9 @@ const PubList: React.FC<PubListSpec> = (props) => {
 
   return (
     <div>
-      <Space direction="vertical">
+      <Space direction="vertical" size="middle">
         {isShowSelector()}
-        
+
         {displayedPub}
       </Space>
     </div>

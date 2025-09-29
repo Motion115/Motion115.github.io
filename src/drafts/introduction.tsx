@@ -2,26 +2,13 @@ import { Typography, Alert, Divider } from "antd";
 import OuterLink from "../modules/outlinks";
 import PersonalInfo from "../modules/info";
 import Selfie from "@/assets/selfie2.png";
-import { useEffect, useState } from "react";
 const { Text, Paragraph, Title } = Typography;
 
 const PersonalIntrouction = () => {
-  const [widthPercentage, setWidthPercentage] = useState("60%");
-  useEffect(() => {
-    const updateWindowDimensions = () => {
-      setWidthPercentage(window.innerWidth < 600 ? "100%" : "60%");
-    };
-    updateWindowDimensions();
-    window.addEventListener("resize", updateWindowDimensions);
-    return () => {
-      window.removeEventListener("resize", updateWindowDimensions);
-    };
-  }, []);
-
   return (
     <PersonalInfo
       portrait={Selfie}
-      name="Ruishi (Ray) Zou"
+      name="Ruishi Zou"
       affiliation="University of California, San Diego"
       location="La Jolla, CA, USA"
       googleScholar="https://scholar.google.com/citations?user=fHRnWkUAAAAJ"
@@ -32,28 +19,43 @@ const PersonalIntrouction = () => {
       twitter="https://twitter.com/_ray_zou"
       personalStatement={
         <>
-          <Alert
-            style={{
-              width: widthPercentage,
-              padding: "auto",
-              margin: "0 auto",
-              textAlign: "center",
-              fontWeight: "bold",
-            }}
-            type="warning"
-            message={
-              <Text>
-                🌟 I am actively seeking Ph.D. opportunities (Spring/Fall 2026
-                cycle). If you see me as a potential fit for your agenda, please
-                message me!
-              </Text>
-            }
-          />
-          <Paragraph></Paragraph>
           <Paragraph>
-            My research interests lie in human-computer interaction (HCI) and
-            visualization. I view myself as a system-HCI researcher: I am
-            interested in exploring{" "}
+            Hello! I am Ruishi Zou (Ray), a second-year master's student from UC
+            San Diego. Previously, I earned my bachelor's degree in Computer
+            Science from Tongji University.
+          </Paragraph>
+          <Paragraph>
+            I <b>design and build intelligent systems</b> that empower humans to
+            make sense of rich information, with the vision of applying them in
+            critical societal domains such as <b>healthcare</b>. I research by
+            making: I use human-centered design methods to identify
+            task-specific needs; I leverage theories from human cognition and
+            technical advances from visualization and artificial intelligence to
+            inform system design; and I rigorously evaluate the systems through
+            mixed-method user studies.
+             {/* I am currently pursuing this vision by 
+            working closely with{" "}
+            <OuterLink
+              link="https://orsonxu.com/"
+              text="Prof. Xuhai (Orson) Xu"
+            />{" "}
+            at the 
+            <OuterLink link="https://sea-lab.space/" text="SEA Lab" />{" "}
+            from Columbia University. */}
+          </Paragraph>
+          <Paragraph>
+            I am the author of several papers at top-tier academic venues,
+            including ACM CHI, IEEE TVCG, and ACL/NAACL. My work has also been
+            acknowledged by the research community, receiving an Honorable
+            Mention at CHI 2025 <OuterLink
+              link="https://drive.google.com/file/d/1H8oKnJMCngU6uWe947Hhu_oe3P83i7n8/view"
+              text="🏅"
+              />.
+          </Paragraph>
+          {/* <Paragraph>
+            My research lies at the intersection of human-computer interaction
+            (HCI), visualization and artificial intelligence (AI). I view myself
+            as a system-HCI researcher: I am interested in exploring{" "}
             <b>
               how to build intelligent interfaces/tools to support cognitive
               tasks
@@ -63,15 +65,34 @@ const PersonalIntrouction = () => {
             Through those works, I have gathered a broad spectrum of skills and
             research methods -- from training AI models to building interactive
             systems, from quantitative to qualitative research.
-          </Paragraph>
+          </Paragraph> */}
+          <Paragraph></Paragraph>
+          <Alert
+            style={{
+              width: "100%",
+              padding: "auto",
+              margin: "0 auto",
+              // textAlign: "center",
+              // fontWeight: "bold",
+            }}
+            type="warning"
+            message={
+              <Text>
+                🔎{" "}
+                <b>
+                  I am actively seeking Ph.D. opportunities starting Fall 2026!
+                </b>
+                <br />
+                👋 Always happy to connect and chat!
+              </Text>
+            }
+          />
         </>
       }
       morePersonalStatement={
         <>
           <Paragraph>
-            I am now a master's student in Computer Science at UC San Diego.
-            Before, I graduated with honors from Tongji University, majoring in
-            Computer Science and Technology. I have broad experience in HCI and
+            I have broad experience in HCI and
             applied AI topics from research and industry. I strive to build
             long-term, collaborative relationships with my mentors, learning
             from their expertise while contributing my own capability to shared
@@ -137,13 +158,14 @@ const PersonalIntrouction = () => {
               </li>
               <li>
                 I am currently visiting the{" "}
-                <OuterLink link="https://sea-lab.space/" text="SEA Lab" /> at Columbia University
-                advised by{" "}
+                <OuterLink link="https://sea-lab.space/" text="SEA Lab" /> at
+                Columbia University advised by{" "}
                 <OuterLink
                   link="https://orsonxu.com/"
                   text="Prof. Xuhai (Orson) Xu"
-                />, working on projects at the intersection of HCI,
-                AI, and health.
+                />
+                , working on projects at the intersection of HCI, AI, and
+                health.
               </li>
             </ul>
             <Paragraph>
@@ -154,8 +176,6 @@ const PersonalIntrouction = () => {
               3) besides research, I am a car/aviation enthusiast: I watch
               motorsport races and sim race F1/WRC machines.{" "}
             </Paragraph>
-            A side note for this summer: please feel free to contact me if you
-            will be in the New York Metropolitan Area! Love to chat with like-minded people about research and life!
           </Paragraph>
         </>
       }

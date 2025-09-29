@@ -11,8 +11,9 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGraduationCap, faLocationDot} from "@fortawesome/free-solid-svg-icons";
 import { faOrcid } from "@fortawesome/free-brands-svg-icons";
-import { Space, Typography, Image, Divider, Layout, Button } from "antd";
+import { Space, Typography, Image, Divider, Layout, Button, Flex } from "antd";
 import LinkIcon from "./group_items/link_icon";
+import useScreenStore from "../store";
 
 const { Text, Paragraph, Title } = Typography;
 
@@ -33,47 +34,77 @@ interface InfoSpec {
 }
 
 const PersonalInfo: React.FC<InfoSpec> = (props) => {
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const { shouldWrap } = useScreenStore();
 
-  useEffect(() => {
-    const handleResize = () => {
-      setScreenWidth(window.innerWidth);
-    };
-    window.addEventListener("resize", handleResize);
-    // Cleanup the event listener when the component unmounts
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  const picWidthSpec = "200px";
 
-  let picWidthSpec = "20%";
-  if (screenWidth < 780) picWidthSpec = "40%";
-  else picWidthSpec = "20%";
+  const baseTextStyle: CSSProperties = {
+    wordBreak: "break-word",
+    overflowWrap: "break-word",
+    hyphens: "auto",
+  };
+  const personalStatementStyle: CSSProperties = shouldWrap
+    ? { ...baseTextStyle, textAlign: "left" }
+    : { ...baseTextStyle, textAlign: "justify" };
 
-  const personalStatementStyle: CSSProperties =
-    screenWidth < 600 ? { textAlign: "left" } : { textAlign: "justify" };
-
-      
   const [showState, setShowState] = useState("show more about me");
-    const renderIcon = () => {
-        if (showState === "show more about me") {
-          return <ArrowDownOutlined />;
-        } else {
-          return <ArrowUpOutlined />;
-        }
-      };
+  const renderIcon = () => {
+    if (showState === "show more about me") {
+      return <ArrowDownOutlined />;
+    } else {
+      return <ArrowUpOutlined />;
+    }
+  };
 
-    const showStateConfig = () => {
-      if (showState === "show more about me") {
-        setShowState("hide");
-      } else if (showState === "hide") {
-        setShowState("show more about me");
-      }
-    };
+  const showStateConfig = () => {
+    if (showState === "show more about me") {
+      setShowState("hide");
+    } else if (showState === "hide") {
+      setShowState("show more about me");
+    }
+  };
 
   return (
-    <div>
-      <Space direction="vertical" style={{ width: "100%" }}>
+    <Flex
+      style={{
+        flexDirection: shouldWrap ? "column-reverse" : "row",
+        width: "100%",
+      }}
+      gap="middle"
+    >
+      <Space
+        direction="vertical"
+        style={{
+          flex: "7 1 1%",
+          width: "100%",
+        }}
+      >
+        <div style={personalStatementStyle}>{props.personalStatement}</div>
+
+        {showState === "show more about me" ? null : (
+          <div style={personalStatementStyle}>
+            {props.morePersonalStatement}
+          </div>
+        )}
+
+        <Button
+          type="text"
+          onClick={showStateConfig}
+          style={{ width: "100%", textAlign: "center" }}
+        >
+          {renderIcon()}
+          {showState}
+        </Button>
+      </Space>
+
+      <Space
+        direction="vertical"
+        style={{
+          flex: "3 1 1%",
+          minWidth: 220,
+          width: "100%",
+        }}
+      >
         {/* <p>Screen Width: {screenWidth}px</p> */}
         <div style={{ textAlign: "center" }}>
           <Image
@@ -86,13 +117,11 @@ const PersonalInfo: React.FC<InfoSpec> = (props) => {
           ></Image>
         </div>
         <div style={{ textAlign: "center" }}>
-          <Text style={{ fontSize: "28px" }} strong={true}>
+          <Text style={{ fontSize: "24px" }} strong={true}>
             {props.name}
           </Text>
           <br />
-          {props.affiliation ? (
-            <Text style={{ fontSize: "18px" }}>{props.affiliation}</Text>
-          ) : null}
+          {props.affiliation ? <Text>{props.affiliation}</Text> : null}
           <br />
           <Text>
             {props.location ? (
@@ -134,31 +163,12 @@ const PersonalInfo: React.FC<InfoSpec> = (props) => {
           />
         </div>
 
-        <div style={{ width: "60%", margin: "0 auto" }}>
+        {/* <div style={{ width: "60%", margin: "0 auto" }}>
           <Divider></Divider>
-        </div>
-
-        <div style={personalStatementStyle}>{props.personalStatement}</div>
-
-        {showState === "show more about me" ? null : (
-          <div style={personalStatementStyle}>
-            {props.morePersonalStatement}
-          </div>
-        )}
-
-        <Button
-          type="text"
-          onClick={showStateConfig}
-          style={{ width: "100%", textAlign: "center" }}
-        >
-          {renderIcon()}
-          {showState}
-        </Button>
+        </div> */}
       </Space>
-    </div>
+    </Flex>
   );
-
-
 };
 
 export default PersonalInfo;

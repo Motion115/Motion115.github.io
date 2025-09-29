@@ -1,6 +1,6 @@
 import { Typography } from "antd";
-import TimeEntry from "../modules/group_items/time_entry";
-import TimedPubList from "../modules/timed_list";
+import TimeEntry from "../../modules/group_items/time_entry";
+import TimedPubList from "../../modules/timed_list";
 import { ZhihuOutlined, LinkOutlined } from "@ant-design/icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBilibili } from "@fortawesome/free-brands-svg-icons";

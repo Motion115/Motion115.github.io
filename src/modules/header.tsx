@@ -24,9 +24,10 @@ const HeaderMenu: React.FC = () => {
       <Affix>
         <Menu
           onClick={onClick}
-          //   selectedKeys={[current]}
+          // selectedKeys={[current]}
           mode="horizontal"
           items={items}
+          defaultSelectedKeys={["Home"]}
         />
       </Affix>
 

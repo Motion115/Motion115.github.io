@@ -7,24 +7,6 @@ const items: MenuProps["items"] = [
   {
     label: <a href={baseServerAddress + "#"}>Home</a>,
     key: "Home",
-    // children: [
-    //   {
-    //     key: "About",
-    //     label: <a href={baseServerAddress + "/#About"}>About</a>,
-    //   },
-    //   {
-    //     key: "Updates",
-    //     label: <a href={baseServerAddress + "/#Updates"}>Updates</a>,
-    //   },
-    //   {
-    //     key: "Publications",
-    //     label: <a href={baseServerAddress + "/#Publications"}>Publications</a>,
-    //   },
-    //   {
-    //     key: "Projects",
-    //     label: <a href={baseServerAddress + "/#Projects"}>Projects</a>,
-    //   },
-    // ],
   },
   {
     label: <a href={baseServerAddress + "#CV"}>CV</a>,
