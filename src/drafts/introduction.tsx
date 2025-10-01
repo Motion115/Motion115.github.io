@@ -1,5 +1,6 @@
 import { Typography, Alert, Divider } from "antd";
 import OuterLink from "../modules/outlinks";
+
 import PersonalInfo from "../modules/info";
 import Selfie from "@/assets/selfie2.png";
 const { Text, Paragraph, Title } = Typography;
@@ -20,20 +21,24 @@ const PersonalIntrouction = () => {
       personalStatement={
         <>
           <Paragraph>
-            Hello! I am Ruishi Zou (Ray), a second-year master's student from UC
-            San Diego. Previously, I earned my bachelor's degree in Computer
-            Science from Tongji University.
+            <u>Interests</u>: Human-computer Interaction · Visualization ·
+            Human-centered AI · Healthcare
+          </Paragraph>
+          <Paragraph>
+            Hello! I am Ruishi (Ray) Zou, a second-year master's
+            student from UC San Diego. Previously, I earned my bachelor's degree
+            in Computer Science from Tongji University.
           </Paragraph>
           <Paragraph>
             I <b>design and build intelligent systems</b> that empower humans to
             make sense of rich information, with the vision of applying them in
-            critical societal domains such as <b>healthcare</b>. I research by
-            making: I use human-centered design methods to identify
-            task-specific needs; I leverage theories from human cognition and
-            technical advances from visualization and artificial intelligence to
-            inform system design; and I rigorously evaluate the systems through
-            mixed-method user studies.
-             {/* I am currently pursuing this vision by 
+            critical societal domains such as healthcare. I research by making:
+            I use human-centered design methods to identify task-specific needs;
+            I leverage theories from human cognition and technical advances from
+            visualization and artificial intelligence to inform system design;
+            and I rigorously evaluate the systems through mixed-method user
+            studies.
+            {/* I am currently pursuing this vision by 
             working closely with{" "}
             <OuterLink
               link="https://orsonxu.com/"
@@ -47,10 +52,12 @@ const PersonalIntrouction = () => {
             I am the author of several papers at top-tier academic venues,
             including ACM CHI, IEEE TVCG, and ACL/NAACL. My work has also been
             acknowledged by the research community, receiving an Honorable
-            Mention at CHI 2025 <OuterLink
+            Mention at CHI 2025{" "}
+            <OuterLink
               link="https://drive.google.com/file/d/1H8oKnJMCngU6uWe947Hhu_oe3P83i7n8/view"
               text="🏅"
-              />.
+            />
+            .
           </Paragraph>
           {/* <Paragraph>
             My research lies at the intersection of human-computer interaction
@@ -92,11 +99,10 @@ const PersonalIntrouction = () => {
       morePersonalStatement={
         <>
           <Paragraph>
-            I have broad experience in HCI and
-            applied AI topics from research and industry. I strive to build
-            long-term, collaborative relationships with my mentors, learning
-            from their expertise while contributing my own capability to shared
-            goals:
+            I have broad experience in HCI and applied AI topics from research
+            and industry. I strive to build long-term, collaborative
+            relationships with my mentors, learning from their expertise while
+            contributing my own capability to shared goals:
             <ul>
               <li>
                 {" "}

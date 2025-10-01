@@ -12,6 +12,7 @@ import {
   ArrowUpOutlined,
   PaperClipOutlined,
 } from "@ant-design/icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useMeasure } from "react-use";
 import { Image, Space, Typography, Tag, Button, Divider, Flex } from "antd";
 import LinkTag from "./link_tag";
@@ -20,6 +21,7 @@ import "../constanats/constants";
 import { Link } from "react-router-dom";
 import { colorBg, colorPrimary } from "../../style/globalStyle";
 import useScreenStore from "../../store";
+import { faPhotoFilm } from "@fortawesome/free-solid-svg-icons";
 const { Text } = Typography;
 
 interface PubEntrySpec {
@@ -47,6 +49,7 @@ interface PubEntrySpec {
   videoLink?: string;
   presentationLink?: string;
   materialLink?: string;
+  slidesLink?: string;
   abstractContent?: JSX.Element;
   teaser?: string;
   teaserInteractive?: string
@@ -104,6 +107,11 @@ const PubEntry: React.FC<PubEntrySpec> = (props: PubEntrySpec) => {
               icon={<AudioOutlined />}
               link={props.presentationLink ? props.presentationLink : ""}
               text="Presentation"
+            ></LinkTag>
+            <LinkTag
+              icon={<FontAwesomeIcon icon={faPhotoFilm} size="sm" />}
+              link={props.slidesLink ? props.slidesLink : ""}
+              text="Slides"
             ></LinkTag>
             <LinkTag
               icon={<InfoCircleOutlined />}

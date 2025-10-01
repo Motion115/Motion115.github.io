@@ -9,6 +9,10 @@ const items: MenuProps["items"] = [
     key: "Home",
   },
   {
+    label: <a href={baseServerAddress + "#publication"}>Publication</a>,
+    key: "Publications",
+  },
+  {
     label: <a href={baseServerAddress + "#CV"}>CV</a>,
     key: "CV",
   },

@@ -6,7 +6,8 @@ import {
   WeiboOutlined,
   TwitterOutlined,
   ArrowDownOutlined,
-  ArrowUpOutlined
+  ArrowUpOutlined,
+  XOutlined
 } from "@ant-design/icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGraduationCap, faLocationDot} from "@fortawesome/free-solid-svg-icons";
@@ -150,7 +151,7 @@ const PersonalInfo: React.FC<InfoSpec> = (props) => {
             link={props.linkedin ? props.linkedin : ""}
           />
           <LinkIcon
-            icon={<TwitterOutlined />}
+            icon={<XOutlined />}
             link={props.twitter ? props.twitter : ""}
           />
           <LinkIcon

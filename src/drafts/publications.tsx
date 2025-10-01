@@ -43,6 +43,7 @@ const publicationList = [
     presentationLink="https://www.youtube.com/watch?v=OIjAvoWdVCo"
     awardName="Best Paper Honorable Mention recognition (top 5%)"
     awardLink="https://drive.google.com/file/d/1H8oKnJMCngU6uWe947Hhu_oe3P83i7n8/view?usp=sharing"
+    slidesLink="https://docs.google.com/presentation/d/1YeqHyuaW8jbh7IDz32FWhVsItT5GdTRp/edit?usp=sharing&ouid=112189970118768667986&rtpof=true&sd=true"
     teaser={GistVisImg}
     teaserInteractive={GistVisInteractive}
   />,
@@ -61,6 +62,7 @@ const publicationList = [
     preprintLink="https://arxiv.org/abs/2504.08235"
     presentationLink="https://www.youtube.com/watch?v=z1Ot7A_E8zY"
     exploreLink="https://drive.google.com/file/d/14aVKKZpnq6T-BrwyWZ_N3Ktx5dKJ1n16/view?usp=sharing"
+    slidesLink="https://docs.google.com/presentation/d/1xrdtgo7sxUgF2hg_fpkLIDos233pqWKp/edit?usp=sharing&ouid=112189970118768667986&rtpof=true&sd=true"
     teaser={LegalaiImg}
   />,
   <PubEntry
