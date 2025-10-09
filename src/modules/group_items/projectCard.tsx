@@ -139,6 +139,7 @@ const ProjectCard: React.FC<ProjectCardSpec> = (props: ProjectCardSpec) => {
                 hovered && props.teaserInteractive
                   ? "0 0 10px rgba(0, 0, 0, 0.1)"
                   : undefined,
+              height: 280
             }}
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}

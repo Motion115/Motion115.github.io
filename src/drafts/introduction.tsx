@@ -17,7 +17,7 @@ const PersonalIntrouction = () => {
       linkedin="https://www.linkedin.com/in/ruzou"
       email="mailto:ruishi.ray.zou@gmail.com"
       orcid="https://orcid.org/0009-0001-3798-6833"
-      twitter="https://twitter.com/_ray_zou"
+      twitter="https://twitter.com/ruishi_zou"
       personalStatement={
         <>
           <Paragraph>
@@ -54,7 +54,7 @@ const PersonalIntrouction = () => {
             acknowledged by the research community, receiving an Honorable
             Mention at CHI 2025{" "}
             <OuterLink
-              link="https://drive.google.com/file/d/1H8oKnJMCngU6uWe947Hhu_oe3P83i7n8/view"
+              link="https://programs.sigchi.org/chi/2025/program/content/188659"
               text="🏅"
             />
             .
