@@ -26,7 +26,8 @@
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "gh:deploy": "gh-pages -d dist"
+    "gh:deploy": "gh-pages -d dist",
+    "gh:deploy-redirect": "gh-pages -d redirect"
   },
   "devDependencies": {
     "@types/jest": "^30.0.0",
