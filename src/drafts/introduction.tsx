@@ -22,7 +22,7 @@ const PersonalIntrouction = () => {
         <>
           <Paragraph>
             <u>Interests</u>: Human-computer Interaction · Visualization ·
-            Human-centered AI · Healthcare
+            Human-centered AI · Health
           </Paragraph>
           <Paragraph>
             Hello! I am Ruishi (Ray) Zou, a second-year master's
@@ -32,7 +32,7 @@ const PersonalIntrouction = () => {
           <Paragraph>
             I <b>design and build intelligent systems</b> that empower humans to
             make sense of rich information, with the vision of applying them in
-            critical societal domains such as healthcare. I research by making:
+            critical societal domains such as health. I research by making:
             I use human-centered design methods to identify task-specific needs;
             I leverage theories from human cognition and technical advances from
             visualization and artificial intelligence to inform system design;

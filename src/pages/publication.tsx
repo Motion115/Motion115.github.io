@@ -12,7 +12,7 @@ const Publication: React.FC = () => (
     <Title level={4} id="Publications">
       Publications
     </Title>
-    <PublicationDisplayList />
+    <PublicationDisplayList isSelected={false} />
   </Content>
 );
 

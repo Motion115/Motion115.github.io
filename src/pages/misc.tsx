@@ -9,7 +9,7 @@ const { Content, Header, Footer } = Layout;
 
 const Misc: React.FC = () => (
   <Content id="Misc">
-    <Title level={4} id="Projects">
+    {/* <Title level={4} id="Projects">
       Selected Projects
     </Title>
     <Divider style={{ margin: "0 0 1% 0" }} />
@@ -17,14 +17,14 @@ const Misc: React.FC = () => (
 
     <Title level={4}>Selected Archive of Course Projects</Title>
     <Divider style={{ margin: "0 0 1% 0" }} />
-    <ProjectArchiveList></ProjectArchiveList>
+    <ProjectArchiveList></ProjectArchiveList> */}
 
     {/* <Title level={4}>Presence on the web</Title>
     <Divider style={{ margin: "0 0 1% 0" }} />
     <PrecenseOnWeb></PrecenseOnWeb> */}
 
-    <Title level={4} id="Conference Misc">
-      Conference Misc
+    <Title level={4} id="Conference Moments">
+      Conference Moments
     </Title>
     <Divider style={{ margin: "0 0 1% 0" }} />
     <Carousel>
@@ -36,7 +36,7 @@ const Misc: React.FC = () => (
           textAlign: "center",
         }}
         message={
-          <Text style={{ fontWeight: "bold" }}>
+          <Text>
             🔍 Attending CHI'25—let's 'CHI'nnect ☕👋! Presenting my
             first-authored papers at the{" "}
             <a

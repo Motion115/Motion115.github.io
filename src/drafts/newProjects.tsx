@@ -4,6 +4,8 @@ import ProjectList from "../modules/projectList";
 import ProjectCard from "../modules/group_items/projectCard";
 import PaperConstellationImg from "@/assets/teaser/paperconstellation.png";
 import PaperConstellationInteractive from "@/assets/teaser/paperconstellation.gif";
+import GistVisImg from "@/assets/teaser/Gistvis.png";
+import GistVisInteractive from "@/assets/teaser/Gistvis_interactive.gif";
 
 const projectList = [
   <ProjectCard
@@ -20,6 +22,17 @@ const projectList = [
     teaser={PaperConstellationImg}
     teaserInteractive={PaperConstellationInteractive}
   />,
+  //   <ProjectCard
+  //   projectTitle="GistVis"
+  //   codeLink="https://github.com/Motion115/paper-constellations"
+  //   exploreLink="https://motion115.github.io/paper-constellations/"
+  //   abstractContent={
+  //     <>
+  //     </>
+  //   }
+  //   teaser={GistVisImg}
+  //   teaserInteractive={GistVisInteractive}
+  // />,
 ];
 
 const NewProjectDisplayList = () => {

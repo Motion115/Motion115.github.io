@@ -22,38 +22,8 @@ import { Link } from "react-router-dom";
 import { colorBg, colorPrimary } from "../../style/globalStyle";
 import useScreenStore from "../../store";
 import { faPhotoFilm } from "@fortawesome/free-solid-svg-icons";
+import { PubEntrySpec } from "../types/pubEntry";
 const { Text } = Typography;
-
-interface PubEntrySpec {
-  paperTitle: string;
-  authors: JSX.Element;
-  venueType:
-    | "Conference"
-    | "Journal"
-    | "Workshop"
-    | "arXiv"
-    | "Pending"
-    | "Other"
-    | "Competition"
-    | "Course"
-    | "Research";
-  venueShort?: string;
-  venueFull: string;
-  affiliation?: string;
-  awardName?: string;
-  awardLink?: string;
-  paperLink?: string;
-  preprintLink?: string;
-  exploreLink?: string;
-  codeLink?: string;
-  videoLink?: string;
-  presentationLink?: string;
-  materialLink?: string;
-  slidesLink?: string;
-  abstractContent?: JSX.Element;
-  teaser?: string;
-  teaserInteractive?: string
-}
 
 const PubEntry: React.FC<PubEntrySpec> = (props: PubEntrySpec) => {
   const { shouldWrap } = useScreenStore();
@@ -189,47 +159,48 @@ const PubEntry: React.FC<PubEntrySpec> = (props: PubEntrySpec) => {
           />
         </div>
       )}
-      <div>
-        <Text strong={true}>{props.paperTitle}</Text>
-        <br />
+      <Flex vertical>
+        <Text strong={true} style={{ padding: "0 0 4px 0" }}>
+          {props.paperTitle}
+        </Text>
         {props.affiliation ? (
           <>
             <Text italic={true}>{props.affiliation}</Text>
             <Divider type="vertical" />
           </>
         ) : null}
-        <Text>{props.authors}</Text>
-        <br />
-        <Tag color={colorProjection[props.venueType]}>
-          <i>
-            <b>{props.venueShort ? props.venueShort : props.venueType}</b>
-          </i>
-        </Tag>
-        <Text italic={true}>{props.venueFull}</Text>
-        <br />
-        {props.awardName ? (
-          <>
-            <Text style={{ color: "#B31B1B" }}>
-              <TrophyOutlined />{" "}
-              {props.awardLink ? (
-                <Link
-                  to={props.awardLink}
-                  style={{ color: "#B31B1B" }}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  {props.awardName}
-                </Link>
-              ) : (
-                props.awardName
-              )}
-            </Text>
-            <br />
-          </>
-        ) : null}
+        <Text style={{ padding: "0 0 4px 0" }}>{props.authors}</Text>
+        <div style={{ padding: "0 0 4px 0" }}>
+          <Tag color={colorProjection[props.venueType]}>
+            <i>
+              <b>{props.venueShort ? props.venueShort : props.venueType}</b>
+            </i>
+          </Tag>
+          <Text italic={true}>{props.venueFull}</Text>
+
+          {props.awardName ? (
+            <div>
+              <Text style={{ color: "#B31B1B" }}>
+                <TrophyOutlined />{" "}
+                {props.awardLink ? (
+                  <Link
+                    to={props.awardLink}
+                    style={{ color: "#B31B1B" }}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    {props.awardName}
+                  </Link>
+                ) : (
+                  props.awardName
+                )}
+              </Text>
+            </div>
+          ) : null}
+        </div>
 
         {extraContentController()}
-      </div>
+      </Flex>
     </Flex>
   );
 };

@@ -5,6 +5,7 @@ const { Text } = Typography;
 
 interface PubListSpec {
   itemList: JSX.Element[]
+  isSelcted: boolean
 }
 
 const PubList: React.FC<PubListSpec> = (props) => {
@@ -67,8 +68,8 @@ const PubList: React.FC<PubListSpec> = (props) => {
 
   return (
     <div>
-      <Space direction="vertical" size="middle">
-        {isShowSelector()}
+      <Space direction="vertical" size={[0, 32]}>
+        {props.isSelcted === false && isShowSelector()}
 
         {displayedPub}
       </Space>
